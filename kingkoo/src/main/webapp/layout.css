@@ -1,0 +1,308 @@
+@charset "EUC-KR";
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+*{
+	margin: 0;
+	padding : 0;
+	box-sizing : border-box;
+}
+a {
+	text-decoration : none;
+}
+ul {
+	list-style : none;
+}
+#container{
+	margin: 0 auto;
+	width : 75em;
+}
+
+
+/*헤더 영역*/
+header{
+	width: 100%;
+	height:6.25em;
+	background-color: rgba(0,0,255,0.5);
+}
+
+
+/*로고영역*/
+#logo{
+	float : left;
+	width : 15.625em;
+	height : 6.25em;
+	line-height:100px;
+	padding-left : 10px;
+}
+#logo h1 {
+	font-family: 'Architects Daughter', cursive;
+	font-weight : 700;
+	font-size : 2.500em;
+	color: white;
+	text-shadow: 0 0.2em 0 #222;
+	text-align : center;
+}
+
+
+/*내비게이션 영역*/
+nav{
+	float : right;
+	width : 56.25em;
+	height : 6.25em;
+	padding-top : 2.500em;
+}
+
+#topMenu{
+	height: 60px;
+}
+#topMenu > li {
+	float: left;
+	position : relative;
+}
+#topMenu > li > a{
+	display : block;
+	color : #fff;
+	font-weight:600;
+	text-shadow : 0 1px #07c;
+	padding : 20px 60px;
+}
+#topMenu > li > a > span {
+	font-size : 0.5em;
+}
+#topMenu > li > a:hover {
+	color : #000;
+	text-shadow : 0 -1 #07c;
+}
+#topMenu > li > ul {
+	display : none;
+	position: absolute;
+	width: 160px;
+	background-color : rgba(255, 255, 255, 0.6);
+	left:0;
+	margin:0;
+	left : 20px;
+}
+#topMenu > li> ul > li {
+	padding : 10px 10px 10px 30px;
+}
+#topMenu > li> ul > li > a {
+	font-size : 14px;
+	padding : 10px;
+	color : #000;
+}
+#topMenu > li:hover > ul {
+	display : block;
+	z-index : 10;
+}
+#topMenu > li > ul > li> a:hover {
+	color : white;
+}
+
+/*이미지 슬라이드 쇼 영역*/
+#slideShow {
+	clear : both;
+	width: 100%;
+	height : 18.750em;
+	overflow:hidden;
+	position:relative;
+}
+#slides{
+	position: absolute;
+}
+#slides > img {
+	width: 100%;
+	float: left;
+}
+button{
+	position: absolute;
+	height: 100%;
+	top:0;
+	border:none;
+	padding:20px;
+	background-color:transparent;
+	color:#000;
+	font-weight:800;
+	font-size:24px;
+	opacity: 0.5;
+}
+#prev{
+	left:0;
+}
+#next{
+	right: 0;
+}
+button:hover{
+	background-color:#222;
+	color:#fff;
+	opacity:0.6;
+	cursor:pointer;
+}
+button:focus{
+	outline:0;
+}
+#contents{
+	width : 100%;
+	height : 18.750em;
+}
+
+
+/* 탭 메뉴 영역 */
+#tabMenu{
+	float : left;
+	width : 37.500em;
+	height : 100%;
+}
+#tabMenu input[type="radio"]{
+	display: none;
+}
+#tabMenu label{
+	display : inline-block;
+	margin: 0 0;
+	padding: 15px 25px;
+	font-weight : 600;
+	text-align:center;
+	color: #aaa;
+	border: 1px solid transparent;
+}
+#tabMenu label:hover{
+	color:#222;
+	cursor:pointer;
+}
+#tabMenu input:checked+label{
+	color:#b00;
+	border: 1px solid #ddd;
+	background-color:#eee;
+}
+.tabContent{
+	display : none;
+	padding : 20px 0 0;
+	border-top : 1px solid #ddd;
+	position:relative;
+}
+.tabContent h2 {
+	display: none;
+}
+#notice ul {
+	list-style:disc;
+	margin-left : 30px;
+}
+#notice ul li{
+	font-size: 16px;
+	line-height : 2.5;
+}
+#gallery ul li{
+	display: inline;
+	padding: 20px;
+}
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery{
+	display: block;
+}
+#contents .caption{
+	position : absolute;
+	top : 200px;
+	width : 300px;
+	height : 200px;
+	padding-top : 20px;
+	background:rgba(0,0,0,0.6);
+	opacity: 0;
+	transition: all 0.6s ease-in-out;
+	z-index: 10;
+}
+#gallery > ul > li:hover > .caption{
+	opacity :1;
+	transform : translateY(-200px)
+}
+
+/* 퀵 링크 영역 */
+#links{
+	float : right;
+	width : 37.500em;
+	height : 100%;
+}
+#links ul {
+	padding : 0;
+	overflow : hidden;
+}
+#links ul li{
+	float: left;
+	width :33%;
+	text-align:center;
+	margin:10px 0;
+}
+#links label{
+	display : inline-block;
+	margin: 0 0;
+	padding: 15px 0 15px 40%;
+	font-weight : 600;
+	text-align:center;
+	color: rgba(140, 0, 0, 0.5);
+	border: 1px solid transparent;
+	font-size : 1.7em;
+}
+#links ul li a span {
+	display:block;
+	margin: 0 auto;
+	width : 150px;
+	height: 150px;
+	border-radius : 100%;
+	border: 1px solid #ddd;
+	line-height: 150px;
+}
+#links p{
+    font-style:oblique;
+
+}
+#quick-icon1{
+	background-image:url('./images/pjs.jpg')
+}
+#quick-icon2{
+	background-image:url('./images/pjs.jpg')
+}
+#quick-icon3{
+	background-image:url('./images/pjs.jpg')
+}
+
+
+/* 푸터 영역 */
+footer{
+	width: 100%;
+	height : 6.250em;
+	border-top : 2.5px solid gray;
+}
+#bottomMenu {
+	width: 100%;
+	height : 20px;
+	position: relative;
+}
+#bottomMenu ul {
+	margin-top : 15px;
+}
+#bottomMenu ul li{
+	float : left;
+	padding : 5px 20px;
+	border-right : 1px solid #ddd;
+}
+#bottomMenu ul li:last-child{
+	border-right:none;
+}
+#bottomMenu ul li a, #bottomMenu ul li a:vosoted{
+	font-size: 15px;
+	color:#666;
+}
+#sns{
+	position:absolute;
+	right:0;
+}
+#sns ul li{
+	border:none;
+	padding:5px;
+}
+#company{
+	clear:left;
+	margin-top:25px;
+	margin-left:20px;
+}
+#company p{
+	font-size :14px;
+	color : #aaa;
+}
